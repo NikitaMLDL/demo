@@ -4,7 +4,8 @@ pip install psycopg2
 django-admin startproject project
 cd .\project\
 django-admin startapp app
-python manage.py inspectdb > models.py 
+python manage.py inspectdb > models.py
+(python manage.py makemigrations)
 python manage.py runserver 
 ```
 (также удаляем новый models.py после перенесения данных в старый)
