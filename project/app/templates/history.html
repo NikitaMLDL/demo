@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'styles.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{partner.partnername}}</h1>
+    <table>
+        <th>Название</th>
+        <th>Кол-во</th>
+        <th>Дата</th>
+        {% for sale in sales %}
+        <tr>
+            <td>{{sale.productid.productname}}</td>
+            <td>{{sale.quantity}}</td>
+            <td>{{sale.saledate}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'partners_list' %}">Назад</a>
+</body>
+</html>

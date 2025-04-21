@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'styles.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <img src="{% static 'master_pol.png' %}" alt=""> <br>
+    <a href="{% url 'add_partner' %}">Добавить</a>
+    {% for partner in partners %}
+    <div class="box">
+        <div class="discount">{{partner.discount}}%</div>
+        <strong>{{partner.partner.partnertype}} | {{partner.partner.partnername}}</strong> <br>
+        {{partner.partner.director}} <br>
+        +7 {{partner.partner.phone}} <br>
+        Рейтинг {{partner.partner.rating}} <br>
+        <a href="{%url 'edit_partner' partner.partner.partnerid %}">Изменить</a>
+        <a href="{%url 'history_partner' partner.partner.partnerid %}">История</a>
+    </div>
+    {% endfor %}
+</body>
+</html>

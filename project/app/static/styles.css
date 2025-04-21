@@ -1,0 +1,38 @@
+:root{
+	--accent: #67BA80;
+	--bg: #F4E8D3;
+}
+body{
+	text-align: center;
+}
+img{
+	width: 150px;
+	height: auto;
+}
+.box{
+	padding: 10px;
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color: var(--bg);
+	box-shadow: 1px 1px 3px;
+	border-radius: 10px;
+}
+.discount{
+	position: absolute;
+	top:5px;
+	right: 5px;
+	font-weight: bold;
+	color:var(--accent);
+}
+table{
+	margin: 0 auto;
+}
+td{
+	padding: 10px;
+	background-color: var(--bg);
+}
+th{
+	background-color: var(--accent);
+}
